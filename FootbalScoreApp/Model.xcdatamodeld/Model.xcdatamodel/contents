@@ -9,12 +9,13 @@
     </entity>
     <entity name="Team" representedClassName="Team" syncable="YES" codeGenerationType="class">
         <attribute name="city" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="regDate" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="players" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Player" inverseName="team" inverseEntity="Player"/>
     </entity>
     <elements>
         <element name="Player" positionX="-54" positionY="18" width="128" height="118"/>
-        <element name="Team" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Team" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>

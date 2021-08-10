@@ -43,21 +43,19 @@ struct NewTeamView: View {
             } label: {
                 Text("Save Team")
                     .bold()
-                    .frame(maxWidth: .infinity, maxHeight: 44)
-                    .background(Color.green)
-                    .foregroundColor(Color.black)
-                    .cornerRadius(10)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .cornerRadius(16)
+                    .overlay(RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.primary, lineWidth: 1)
+                    )
             }
-            
-            
+
             Button {
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Cancel")
-                    .bold()
                     .frame(maxWidth: .infinity, maxHeight: 44)
-                    .background(Color.gray)
-                    .foregroundColor(Color.black)
                     .cornerRadius(10)
             }
             

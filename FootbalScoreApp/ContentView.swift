@@ -10,6 +10,7 @@ import CoreData
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Team.entity(), sortDescriptors: []) var teams: FetchedResults<Team>
     @State private var isShowingNewTeamView = false
     
@@ -24,6 +25,8 @@ struct ContentView: View {
                 ForEach(teams) { team in
                     Text(team.name ?? "")
                 }
+                .onDelete(perform: deleteTeam)
+                .onMove(perform: moveTeam)
             }
             }
             .navigationTitle("FootbalScore")
@@ -36,7 +39,19 @@ struct ContentView: View {
                     }
                 }
             }
+            
         }
+    }
+    func deleteTeam(at offsets: IndexSet) {
+        offsets.forEach { (index) in
+            let team = teams[index]
+            moc.delete(team)
+            try? moc.save()
+        }
+    }
+    
+    func moveTeam(fromOffset: IndexSet, toOffset: Int) {
+        
     }
 }
 
