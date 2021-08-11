@@ -14,6 +14,8 @@
 		E772C8E726BEF36E005BA4D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E772C8E626BEF36E005BA4D9 /* Preview Assets.xcassets */; };
 		E772C8F026BEF3AC005BA4D9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E772C8EF26BEF3AC005BA4D9 /* CoreDataManager.swift */; };
 		E772C8F426BEF708005BA4D9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E772C8F226BEF708005BA4D9 /* Model.xcdatamodeld */; };
+		E7C172D526C3D0B30064C1AC /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C172D426C3D0B20064C1AC /* TeamDetailView.swift */; };
+		E7D1090626C401C4006C12D7 /* NewPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D1090526C401C4006C12D7 /* NewPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E772C8E826BEF36E005BA4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E772C8EF26BEF3AC005BA4D9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E772C8F326BEF708005BA4D9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E7C172D426C3D0B20064C1AC /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
+		E7D1090526C401C4006C12D7 /* NewPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				E772C8DF26BEF36A005BA4D9 /* FootbalScoreAppApp.swift */,
 				E772C8E126BEF36A005BA4D9 /* ContentView.swift */,
 				E700024A26BF20B100B5C8CC /* NewTeamView.swift */,
+				E7C172D426C3D0B20064C1AC /* TeamDetailView.swift */,
+				E7D1090526C401C4006C12D7 /* NewPlayerView.swift */,
 				E772C8EF26BEF3AC005BA4D9 /* CoreDataManager.swift */,
 				E772C8F226BEF708005BA4D9 /* Model.xcdatamodeld */,
 				E772C8E326BEF36E005BA4D9 /* Assets.xcassets */,
@@ -147,10 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C172D526C3D0B30064C1AC /* TeamDetailView.swift in Sources */,
 				E772C8F026BEF3AC005BA4D9 /* CoreDataManager.swift in Sources */,
 				E772C8E226BEF36A005BA4D9 /* ContentView.swift in Sources */,
 				E772C8E026BEF36A005BA4D9 /* FootbalScoreAppApp.swift in Sources */,
 				E700024B26BF20B100B5C8CC /* NewTeamView.swift in Sources */,
+				E7D1090626C401C4006C12D7 /* NewPlayerView.swift in Sources */,
 				E772C8F426BEF708005BA4D9 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

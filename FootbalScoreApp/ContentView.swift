@@ -23,10 +23,14 @@ struct ContentView: View {
             
             List {
                 ForEach(teams) { team in
+                    NavigationLink(destination: TeamDetailView(team: team)) {
+                    HStack {
                     Text(team.name ?? "")
+                    Text(team.city ?? "")
+                    }
+                    }
                 }
                 .onDelete(perform: deleteTeam)
-                .onMove(perform: moveTeam)
             }
             }
             .navigationTitle("FootbalScore")
@@ -50,9 +54,6 @@ struct ContentView: View {
         }
     }
     
-    func moveTeam(fromOffset: IndexSet, toOffset: Int) {
-        
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

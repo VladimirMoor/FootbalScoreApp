@@ -46,18 +46,20 @@ struct NewTeamView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 10)
                     .cornerRadius(16)
-                    .overlay(RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color.primary, lineWidth: 1)
-                    )
+                    .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.primary, lineWidth: 2))
             }
 
             Button {
                 self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Cancel")
-                    .frame(maxWidth: .infinity, maxHeight: 44)
-                    .cornerRadius(10)
-            }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .background(Color.gray.opacity(0.3))
+                    .cornerRadius(16)
+                    .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.primary, lineWidth: 1))
+                    
+                    }
             
             Spacer()
             
