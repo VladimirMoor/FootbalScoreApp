@@ -20,8 +20,9 @@ struct NewPlayerView: View {
     var body: some View {
             
             VStack(spacing: 10) {
-                Spacer()
+            
             Text("Enter information about new player:")
+                .padding(.top, 40)
             TextField("Full name", text: $fullName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
@@ -29,12 +30,12 @@ struct NewPlayerView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numberPad)
             
-                
-            Picker("Choose role", selection: $role) {
+            Picker("Choose role: \(role)", selection: $role) {
                 ForEach(possibleRoles, id:\.self) { item in
                     Text(item)
                 }
             }
+            .pickerStyle(MenuPickerStyle())
             
             TextField("Number", text: $number)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -53,6 +54,7 @@ struct NewPlayerView: View {
                 try? moc.save()
                 
                 presentationMode.wrappedValue.dismiss()
+                
             } label: {
                 Text("Save")
                     .frame(maxWidth: .infinity)

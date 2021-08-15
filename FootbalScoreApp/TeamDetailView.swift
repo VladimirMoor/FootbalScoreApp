@@ -37,7 +37,6 @@ struct TeamDetailView: View {
                 } label: {
                     Image(systemName: "plus.circle")
                 }
-
             }
         }
         .sheet(isPresented: $isShownAddPlayerView) {

@@ -26,7 +26,7 @@ struct ContentView: View {
                     NavigationLink(destination: TeamDetailView(team: team)) {
                     HStack {
                     Text(team.name ?? "")
-                    Text(team.city ?? "")
+                    Text("(\(team.city ?? ""))")
                     }
                     }
                 }
@@ -47,7 +47,7 @@ struct ContentView: View {
         }
     }
     func deleteTeam(at offsets: IndexSet) {
-        offsets.forEach { (index) in
+        offsets.forEach { index in
             let team = teams[index]
             moc.delete(team)
             try? moc.save()
